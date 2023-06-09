@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test:selenium": "jest --testPathPattern=dist",
-    "test:playwright": "npx playwright test tests/playwright",
-    "test:playwright:ui": "npx playwright test --ui tests/playwright",
+    "test:pw": "npx playwright test tests/playwright",
+    "test:pw:debug": "npx playwright test tests/playwright --debug",
+    "test:pw:record-trace": "npx playwright test tests/playwright --trace on",
+    "test:pw:ui": "npx playwright test --ui tests/playwright",
+    "pw:report": "npx playwright show-report",
     "compile": "tsc",
     "compile:watch": "tsc -w"
   },
