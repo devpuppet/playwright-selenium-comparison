@@ -1,7 +1,7 @@
 import { By, locateWith } from "selenium-webdriver";
 import { Input } from "../components/input";
 import { Browser } from "../core/browser";
-import { Crededentials } from "../model/Auth";
+import { Crededentials } from "../../model/Auth";
 import { Button } from "../components/button";
 
 export class LoginPage {

@@ -1,7 +1,7 @@
 import { Browser as BrowserName } from "selenium-webdriver";
-import { LoginPage } from "../pages/login.page";
-import { Browser } from "../core/browser";
-import { HomePage } from "../pages/home.page";
+import { LoginPage } from "../../selenium/pages/login.page";
+import { Browser } from "../../selenium/core/browser";
+import { HomePage } from "../../selenium/pages/home.page";
 
 describe('Selenium tests', () => {
 
