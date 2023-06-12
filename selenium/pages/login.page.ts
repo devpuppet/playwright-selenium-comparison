@@ -1,4 +1,4 @@
-import { By, locateWith } from "selenium-webdriver";
+import { By, locateWith, until } from "selenium-webdriver";
 import { Input } from "../components/input";
 import { Browser } from "../core/browser";
 import { Crededentials } from "../../model/Auth";
@@ -32,6 +32,7 @@ export class LoginPage {
     public async login(credentials: Crededentials) {
         await this.enterCredentials(credentials);
         await this.clickLoginButton();
+        await this.browser.wait(until.urlIs('https://spec-lead-notes.web.app/'));
     }
 
     public async enterCredentials(credentials: Crededentials) {
