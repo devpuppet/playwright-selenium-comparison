@@ -1,5 +1,6 @@
 import { By } from "selenium-webdriver";
 import { Component } from "./component";
+import { findAsync } from "../../common/utils";
 
 export class PeopleTab extends Component {
 
@@ -8,8 +9,10 @@ export class PeopleTab extends Component {
     }
 
     public async getUnitByName(unitName: string): Promise<Unit> {
-        const units = await this.units;
-        const unit = units.find(async unit => (await unit.getUnitName()).includes(unitName));
+        const unit = await findAsync(
+            await this.units,
+            async unit => ((await unit.getUnitName()).toLowerCase()).includes(unitName.toLowerCase())
+        );
 
         if (!unit) {
             throw Error(`Unit with name = ${unitName} not found`);
