@@ -8,6 +8,9 @@ export default defineConfig({
     trace: 'on',
     screenshot: 'on'
   },
-  reporter: [[ 'html', { open: 'never' }]]
+  reporter: [
+      [ 'html', { open: 'never' }],
+      [ 'junit', { outputFile: 'test-results/e2e-junit-results.xml' }]
+  ]
 });
 
