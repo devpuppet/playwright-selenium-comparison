@@ -19,6 +19,7 @@ pipeline {
     }
     post {
         always {
+            archiveArtifacts artifacts: 'playwright-report', fingerprint: true
             junit 'test-results/**/*.xml'
         }
     }
