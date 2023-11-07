@@ -30,7 +30,7 @@ pipeline {
     }
     post {
         always {
-            archiveArtifacts artifacts: 'playwright-report/index.html', fingerprint: true
+            archiveArtifacts artifacts: 'playwright-report/**/*.*', fingerprint: true
             junit 'test-results/**/*.xml'
         }
     }
