@@ -9,6 +9,7 @@
     "test:pw:debug": "npx playwright test tests/playwright --debug",
     "test:pw:record-trace": "npx playwright test tests/playwright --trace on",
     "test:pw:ui": "npx playwright test --ui tests/playwright",
+    "pw:install": "npx playwright install",
     "pw:report": "npx playwright show-report",
     "compile": "tsc",
     "compile:watch": "tsc -w"

@@ -8,7 +8,13 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'npm install && npm run test:pw'
+                sh 'npm install'
+                sh 'npm run pw:install'
+            }
+        }
+        stage('test') {
+            steps {
+                sh 'npm run test:pw'
             }
         }
     }
