@@ -5,7 +5,15 @@ const config: Config = {
   rootDir: './tests/selenium',
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest"
-  }
+  },
+  reporters: [
+    'default',
+    ['jest-html-reporter', {
+      outputPath: "./selenium-report/report.html",
+      pageTitle: "Selenium 4 Test Results",
+      includeFailureMsg: true
+    }]
+  ]
 };
 
 export default config;

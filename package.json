@@ -6,6 +6,7 @@
   "scripts": {
     "test:selenium": "jest",
     "test:pw": "npx playwright test tests/playwright",
+    "test:pw:headed": "npx playwright test tests/playwright --headed",
     "test:pw:debug": "npx playwright test tests/playwright --debug",
     "test:pw:record-trace": "npx playwright test tests/playwright --trace on",
     "test:pw:ui": "npx playwright test --ui tests/playwright",
@@ -19,18 +20,19 @@
   "devDependencies": {
     "@babel/core": "^7.22.5",
     "@babel/preset-env": "^7.22.5",
-    "@playwright/test": "^1.34.3",
+    "@playwright/test": "^1.44.1",
     "@types/jest": "^29.5.2",
     "@types/node": "^20.2.5",
     "@types/selenium-webdriver": "^4.1.15",
     "babel-jest": "^29.5.0",
     "jest": "^29.5.0",
-    "playwright": "^1.34.3",
+    "playwright": "^1.44.1",
     "selenium-webdriver": "^4.14.0",
     "ts-jest": "^29.1.0",
     "typescript": "^5.0.4"
   },
   "dependencies": {
+    "jest-html-reporter": "^3.10.2",
     "ts-node": "^10.9.1"
   }
 }

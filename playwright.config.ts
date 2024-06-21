@@ -10,7 +10,7 @@ export default defineConfig({
   },
   reporter: [
       [ 'html', { open: 'never' }],
-      [ 'junit', { outputFile: 'test-results/e2e-junit-results.xml' }]
+      [ 'junit', { outputFile: 'playwright-report/e2e-junit-results.xml' }]
   ]
 });
 
